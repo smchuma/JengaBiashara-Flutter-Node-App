@@ -22,7 +22,7 @@ class JengaApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Color(0xFFF8FAFC),
         appBarTheme: AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 11, 123, 121),
+          backgroundColor: Colors.blue.shade800,
           foregroundColor: Colors.white,
           elevation: 2,
           centerTitle: true,

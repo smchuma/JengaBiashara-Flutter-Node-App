@@ -7,7 +7,14 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Duka", style: TextStyle(color: Colors.white)),
+        leading: Builder(
+          builder: (ctx) =>
+              IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        ),
+        title: const Text(
+          "Duka",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+        ),
       ),
     );
   }
