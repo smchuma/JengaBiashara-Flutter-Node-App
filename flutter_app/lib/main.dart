@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/features/dashboard/dashboard_screen.dart';
+import 'package:flutter_app/theme/app_theme.dart';
 
 void main() {
   runApp(const JengaApp());
@@ -15,40 +16,7 @@ class JengaApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: "/dashboard",
       routes: {"/dashboard": (context) => DashboardScreen()},
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF0EA5A2),
-          brightness: Brightness.light,
-        ),
-        scaffoldBackgroundColor: Color(0xFFF8FAFC),
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.blue.shade800,
-          foregroundColor: Colors.white,
-          elevation: 2,
-          centerTitle: true,
-        ),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Color(0xFF0EA5A2),
-          foregroundColor: Colors.white,
-        ),
-
-        filledButtonTheme: FilledButtonThemeData(
-          style: FilledButton.styleFrom(
-            backgroundColor: Color(0xFF0EA5A2),
-            foregroundColor: Colors.white,
-            textStyle: TextStyle(fontWeight: FontWeight.w600),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-          ),
-        ),
-        // Text
-        textTheme: TextTheme(
-          bodySmall: TextStyle(color: Color(0xFF475569)),
-          bodyMedium: TextStyle(color: Color(0xFF0F172A)),
-        ),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.lightTheme,
     );
   }
 }
